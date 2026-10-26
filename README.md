@@ -13,3 +13,4 @@ Read the [public website](https://humanityscharter.org/) for governance and part
 - Charter text, public explanatory writing, and research documentation are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE-CHARTER.md).
 
 Contact: `hello@humanityscharter.org`
+
