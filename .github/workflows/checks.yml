@@ -1,0 +1,23 @@
+name: Charter candidate checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions: {}
+
+jobs:
+  charter_boundary:
+    name: Charter source boundary
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # locally inspected v7 pin; verify owner/version before activation
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Check exact Charter candidate
+        run: python -B .github/scripts/check_charter.py --checkout .
